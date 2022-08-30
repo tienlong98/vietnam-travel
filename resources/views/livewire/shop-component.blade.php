@@ -11,265 +11,54 @@
                 <div class="sapxep mb-5">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Defaul</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                            <select class="form-select css-border" aria-label="Default select example"
+                                wire:model="sorting">
+                                <option value="default" selected>Default</option>
+                                <option value="date">Sort by newness</option>
+                                <option value="featured">Sort by Featured </option>
+                                <option value="price">Sort by price: low to high</option>
+                                <option value="price-desc">Sort by price: high to low</option>
                             </select>
                         </div>
                     </div>
 
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5">
-                        <div class="item-tour">
-                            <img src="{{ asset('images/bg-home2.jpg') }}" width="100%" alt="">
-                            <div class="item-content-tour ps-3">
-                                <div class="content-title d-flex justify-content-between fs-5">
-                                    <p>Ha Long</p>
-                                    <p>2N1D</p>
-                                </div>
-                                <div class="star fs-6">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                </div>
-                                <div class="content-text">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                </div>
-                                <div class="content-bottom d-flex justify-content-between">
-                                    <p class="fs-5 fw-b">5000$</p>
-                                    <p>More...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5">
-                        <div class="item-tour">
-                            <img src="{{ asset('images/bg-home2.jpg') }}" width="100%" alt="">
-                            <div class="item-content-tour ps-3">
-                                <div class="content-title d-flex justify-content-between fs-5">
-                                    <p>Ha Long</p>
-                                    <p>2N1D</p>
-                                </div>
-                                <div class="star fs-6">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                </div>
-                                <div class="content-text">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                </div>
-                                <div class="content-bottom d-flex justify-content-between">
-                                    <p class="fs-5 fw-b">5000$</p>
-                                    <p>More...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5">
-                        <div class="item-tour">
-                            <img src="{{ asset('images/bg-home2.jpg') }}" width="100%" alt="">
-                            <div class="item-content-tour ps-3">
-                                <div class="content-title d-flex justify-content-between fs-5">
-                                    <p>Ha Long</p>
-                                    <p>2N1D</p>
-                                </div>
-                                <div class="star fs-6">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                </div>
-                                <div class="content-text">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                </div>
-                                <div class="content-bottom d-flex justify-content-between">
-                                    <p class="fs-5 fw-b">5000$</p>
-                                    <p>More...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5">
-                        <div class="item-tour">
-                            <img src="{{ asset('images/bg-home2.jpg') }}" width="100%" alt="">
-                            <div class="item-content-tour ps-3">
-                                <div class="content-title d-flex justify-content-between fs-5">
-                                    <p>Ha Long</p>
-                                    <p>2N1D</p>
-                                </div>
-                                <div class="star fs-6">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                </div>
-                                <div class="content-text">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                </div>
-                                <div class="content-bottom d-flex justify-content-between">
-                                    <p class="fs-5 fw-b">5000$</p>
-                                    <p>More...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5">
-                        <div class="item-tour">
-                            <img src="{{ asset('images/bg-home2.jpg') }}" width="100%" alt="">
-                            <div class="item-content-tour ps-3">
-                                <div class="content-title d-flex justify-content-between fs-5">
-                                    <p>Ha Long</p>
-                                    <p>2N1D</p>
-                                </div>
-                                <div class="star fs-6">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                </div>
-                                <div class="content-text">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                </div>
-                                <div class="content-bottom d-flex justify-content-between">
-                                    <p class="fs-5 fw-b">5000$</p>
-                                    <p>More...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @foreach ($tours as $tour)
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5">
+                            <div class="item-tour">
+                                <a href="{{ route('tour.details', ['slug' => $tour->slug]) }}"><img
+                                        src="{{ asset('images') }}/{{ $tour->image }}" width="100%"
+                                        alt=""></a>
+                                <div class="item-content-tour ps-3">
+                                    <div class="content-title fs-5">
+                                        <a href="tour.details', ['slug' => $tour->slug]) }}">
+                                            <p>{{ $tour->name }}</p>
+                                        </a>
 
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5">
-                        <div class="item-tour">
-                            <img src="{{ asset('images/bg-home2.jpg') }}" width="100%" alt="">
-                            <div class="item-content-tour ps-3">
-                                <div class="content-title d-flex justify-content-between fs-5">
-                                    <p>Ha Long</p>
-                                    <p>2N1D</p>
-                                </div>
-                                <div class="star fs-6">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                </div>
-                                <div class="content-text">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                </div>
-                                <div class="content-bottom d-flex justify-content-between">
-                                    <p class="fs-5 fw-b">5000$</p>
-                                    <p>More...</p>
+                                    </div>
+                                    <div class="star fs-6">
+                                        <ion-icon name="star-outline"></ion-icon>
+                                        <ion-icon name="star-outline"></ion-icon>
+                                        <ion-icon name="star-outline"></ion-icon>
+                                        <ion-icon name="star-outline"></ion-icon>
+                                        <ion-icon name="star-outline"></ion-icon>
+                                    </div>
+                                    <div class="content-text">
+                                        {{ $tour->short_descripsition }}
+                                    </div>
+                                    <div class="content-bottom d-flex justify-content-between">
+                                        <p class="fs-5 fw-b">{{ number_format($tour->regular_price) }}$</p>
+                                        <a
+                                            href=""wire:click.prevent="store('{{ $tour->id }}','{{ $tour->name }}','{{ $tour->regular_price }}')">Book
+                                            Now</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5">
-                        <div class="item-tour">
-                            <img src="{{ asset('images/bg-home2.jpg') }}" width="100%" alt="">
-                            <div class="item-content-tour ps-3">
-                                <div class="content-title d-flex justify-content-between fs-5">
-                                    <p>Ha Long</p>
-                                    <p>2N1D</p>
-                                </div>
-                                <div class="star fs-6">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                </div>
-                                <div class="content-text">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                </div>
-                                <div class="content-bottom d-flex justify-content-between">
-                                    <p class="fs-5 fw-b">5000$</p>
-                                    <p>More...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5">
-                        <div class="item-tour">
-                            <img src="{{ asset('images/bg-home2.jpg') }}" width="100%" alt="">
-                            <div class="item-content-tour ps-3">
-                                <div class="content-title d-flex justify-content-between fs-5">
-                                    <p>Ha Long</p>
-                                    <p>2N1D</p>
-                                </div>
-                                <div class="star fs-6">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                </div>
-                                <div class="content-text">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                </div>
-                                <div class="content-bottom d-flex justify-content-between">
-                                    <p class="fs-5 fw-b">5000$</p>
-                                    <p>More...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5">
-                        <div class="item-tour">
-                            <img src="{{ asset('images/bg-home2.jpg') }}" width="100%" alt="">
-                            <div class="item-content-tour ps-3">
-                                <div class="content-title d-flex justify-content-between fs-5">
-                                    <p>Ha Long</p>
-                                    <p>2N1D</p>
-                                </div>
-                                <div class="star fs-6">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                </div>
-                                <div class="content-text">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                </div>
-                                <div class="content-bottom d-flex justify-content-between">
-                                    <p class="fs-5 fw-b">5000$</p>
-                                    <p>More...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 d-flex justify-content-center">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Previous">
-                                        <span aria-hidden="true">
-                                            << </span>
-                                    </a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">>></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-
+                    @endforeach
                 </div>
+                {{ $tours->links() }}
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-12">
                 <div class="timkiem mt-5 mb-5">
@@ -277,8 +66,8 @@
                         <form class="container-fluid">
                             <div class="input-group">
 
-                                <input type="text" class="form-control" placeholder="Search"
-                                    aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Username"
+                                    aria-describedby="basic-addon1">
                                 <span class="input-group-text" id="basic-addon1">
                                     <a href="#">
                                         <ion-icon name="search-outline"></ion-icon>
@@ -290,190 +79,65 @@
                 </div>
                 <div class="best-tour-ex mb-5">
                     <div class="title-best-tour">
-                        <h4>Best Tour</h4>
+                        <p class="fs-4 fw-b">All Categories</p>
                     </div>
-                    <div class="item-best-tour d-flex">
-                        <img src="{{ asset('images/bg-home2.jpg') }}" class="rounded" width="80" height="80"
-                            alt="">
-                        <div class="item-content">
-                            <div class="content-top d-flex justify-content-between">
-                                <p class="fs-5">Ha Long </p>
-                                <div class="star">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-half-outline"></ion-icon>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <p class="fs-5">5000$</p>
-                                <a href="#">
-                                    <p class="fs-5">More</p>
-                                </a>
-                            </div>
+                    @foreach ($categories as $item)
+                        <div class="css-dmh fix-bd-1">
+                            <a href="{{ route('tour.category', ['category_slug' => $item->slug]) }}"
+                                class="name-dm">{{ $item->name }}</a>
                         </div>
-                    </div>
-                    <div class="item-best-tour d-flex">
-                        <img src="{{ asset('images/bg-home2.jpg') }}" class="rounded" width="80" height="80"
-                            alt="">
-                        <div class="item-content">
-                            <div class="content-top d-flex justify-content-between">
-                                <p class="fs-5">Ha Long </p>
-                                <div class="star">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-half-outline"></ion-icon>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <p class="fs-5">5000$</p>
-                                <a href="#">
-                                    <p class="fs-5">More</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-best-tour d-flex">
-                        <img src="{{ asset('images/bg-home2.jpg') }}" class="rounded" width="80" height="80"
-                            alt="">
-                        <div class="item-content">
-                            <div class="content-top d-flex justify-content-between">
-                                <p class="fs-5">Ha Long </p>
-                                <div class="star">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-half-outline"></ion-icon>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <p class="fs-5">5000$</p>
-                                <a href="#">
-                                    <p class="fs-5">More</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-best-tour d-flex">
-                        <img src="{{ asset('images/bg-home2.jpg') }}" class="rounded" width="80" height="80"
-                            alt="">
-                        <div class="item-content">
-                            <div class="content-top d-flex justify-content-between">
-                                <p class="fs-5">Ha Long </p>
-                                <div class="star">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-half-outline"></ion-icon>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <p class="fs-5">5000$</p>
-                                <a href="#">
-                                    <p class="fs-5">More</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-                <div class="best-tour-ex">
+                <div class="best-tour-ex mb-5">
                     <div class="title-best-tour">
-                        <h4>Recommended</h4>
+                        <p class="fs-4 fw-b">Popular Tour</p>
                     </div>
-                    <div class="item-best-tour d-flex">
-                        <img src="{{ asset('images/bg-home2.jpg') }}" class="rounded" width="80" height="80"
-                            alt="">
-                        <div class="item-content">
-                            <div class="content-top d-flex justify-content-between">
-                                <p class="fs-5">Ha Long </p>
-                                <div class="star">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-half-outline"></ion-icon>
+                    @foreach ($popular_tour as $item)
+                        <div class="item-best-tour d-flex">
+                            <a href="{{ route('tour.details', ['slug' => $tour->slug]) }}"><img
+                                    src="{{ asset('images') }}/{{ $item->image }}" width="80" height="80"
+                                    alt=""></a>
+                            <div class="item-content">
+                                <div class="content-top">
+                                    <p class="fs-5">{{ $item->name }} </p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fs-5">{{ number_format($item->regular_price) }}$</p>
+                                    <a
+                                        href=""wire:click.prevent="store('{{ $item->id }}','{{ $item->name }}','{{ $item->regular_price }}')">Book
+                                        Now</a>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-between">
-                                <p class="fs-5">5000$</p>
-                                <a href="#">
-                                    <p class="fs-5">More</p>
-                                </a>
-                            </div>
                         </div>
-                    </div>
-                    <div class="item-best-tour d-flex">
-                        <img src="{{ asset('images/bg-home2.jpg') }}" class="rounded" width="80" height="80"
-                            alt="">
-                        <div class="item-content">
-                            <div class="content-top d-flex justify-content-between">
-                                <p class="fs-5">Ha Long </p>
-                                <div class="star">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-half-outline"></ion-icon>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <p class="fs-5">5000$</p>
-                                <a href="#">
-                                    <p class="fs-5">More</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-best-tour d-flex">
-                        <img src="{{ asset('images/bg-home2.jpg') }}" class="rounded" width="80" height="80"
-                            alt="">
-                        <div class="item-content">
-                            <div class="content-top d-flex justify-content-between">
-                                <p class="fs-5">Ha Long </p>
-                                <div class="star">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-half-outline"></ion-icon>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <p class="fs-5">5000$</p>
-                                <a href="#">
-                                    <p class="fs-5">More</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item-best-tour d-flex">
-                        <img src="{{ asset('images/bg-home2.jpg') }}" class="rounded" width="80" height="80"
-                            alt="">
-                        <div class="item-content">
-                            <div class="content-top d-flex justify-content-between">
-                                <p class="fs-5">Ha Long </p>
-                                <div class="star">
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-outline"></ion-icon>
-                                    <ion-icon name="star-half-outline"></ion-icon>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                <p class="fs-5">5000$</p>
-                                <a href="#">
-                                    <p class="fs-5">More</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+
+
                 </div>
+                {{-- <div class="best-tour-ex mb-5">
+                    <div class="title-best-tour">
+                        <p class="fs-4 fw-b">Felated Tour</p>
+                    </div>
+                    @foreach ($related_tour as $item)
+                        <div class="item-best-tour d-flex">
+                            <a href="{{ route('tour.details', ['slug' => $tour->slug]) }}"><img
+                                    src="{{ asset('images') }}/{{ $item->image }}" width="80" height="80"
+                                    alt=""></a>
+                            <div class="item-content">
+                                <div class="content-top">
+                                    <p class="fs-5">{{ $item->name }} </p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fs-5">{{ number_format($item->regular_price) }}$</p>
+                                    <a
+                                        href=""wire:click.prevent="store('{{ $item->id }}','{{ $item->name }}','{{ $item->regular_price }}')">Book
+                                        Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+
+
+                </div> --}}
             </div>
         </div>
     </div>

@@ -1,7 +1,9 @@
 @import url("./fonts.css");
+
 body {
     font-family: "Huifont";
 }
+
 .menu {
     margin-left: 25px;
     background-color: white;
@@ -39,6 +41,41 @@ body {
 
         .nav-link {
             color: black;
+        }
+    }
+
+    .menu-right {
+        .login {
+            position: relative;
+
+            .fix-hover {
+                color: black;
+                text-decoration: none;
+
+                ion-icon {
+                    margin-top: 5px;
+                }
+            }
+
+            .list-menu-user {
+                display: none;
+                position: absolute;
+                background-color: #fef7f5;
+                top: 25px;
+                width: 100%;
+
+                a {
+                    color: #000000;
+                    text-decoration: none;
+                    padding-left: 10px;
+                }
+            }
+
+            &:hover {
+                .list-menu-user {
+                    display: block;
+                }
+            }
         }
     }
 }

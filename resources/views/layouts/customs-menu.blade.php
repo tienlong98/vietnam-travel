@@ -42,17 +42,62 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="menu-right d-flex">
+                    <div class="menu-right d-flex mt-4">
                         <div class="search me-4">
                             <a href="#">
                                 <ion-icon name="cart-outline"></ion-icon>
                             </a>
                         </div>
-                        <div class="login me-3">
-                            <a href="#">
-                                <ion-icon name="person-outline"></ion-icon>
-                            </a>
-                        </div>
+
+                        @if (Route::has('login'))
+                            @auth
+
+                                @if (Auth::user()->utype === 'ADM')
+                                    <div class="login me-3 pe-3 ps-3">
+                                        <a class="fix-hover d-flex" href="">
+                                            <p class="fs-5">{{ Auth::user()->name }}</p>
+                                            <ion-icon name="chevron-down-outline"></ion-icon>
+                                        </a>
+                                        <div class="list-menu-user">
+                                            <div class="mt-2"><a href="{{ route('admin.dashboard') }}">Dashboard</a></div>
+                                            <div class="mt-2"><a href="{{ route('admin.categories') }}">Categories</a>
+                                            </div>
+                                            <div class="mt-2"><a href="{{ route('logout') }}"
+                                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit('');">Logout</a>
+                                            </div>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                                @csrf
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                @else
+                                    <div class="login me-3 pe-3 ps-3">
+                                        <a class="fix-hover d-flex" href="">
+                                            <p class="fs-5">{{ Auth::user()->name }}</p>
+                                            <ion-icon name="chevron-down-outline"></ion-icon>
+                                        </a>
+                                        <div class="list-menu-user">
+                                            <div class="mt-2"><a href="{{ route('user.dashboard') }}">Dashboard</a></div>
+                                            <div class="mt-2"><a href="{{ route('logout') }}"
+                                                    onclick="event.preventDefault(); document.getElementById('logout-form').submit('');">ログアウト</a>
+                                            </div>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                                @csrf
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                @endif
+                            @else
+                                <div class="login me-3">
+                                    <a href="{{ route('login') }}">
+                                        <ion-icon name="person-outline"></ion-icon>
+                                    </a>
+                                </div>
+                            @endauth
+                        @endif
+
                     </div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

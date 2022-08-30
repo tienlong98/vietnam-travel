@@ -46,6 +46,37 @@ body {
   color: black;
 }
 
+.menu .menu-right .login {
+  position: relative;
+}
+
+.menu .menu-right .login .fix-hover {
+  color: black;
+  text-decoration: none;
+}
+
+.menu .menu-right .login .fix-hover ion-icon {
+  margin-top: 5px;
+}
+
+.menu .menu-right .login .list-menu-user {
+  display: none;
+  position: absolute;
+  background-color: #fef7f5;
+  top: 25px;
+  width: 100%;
+}
+
+.menu .menu-right .login .list-menu-user a {
+  color: #000000;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.menu .menu-right .login:hover .list-menu-user {
+  display: block;
+}
+
 footer .logo-footer {
   position: relative;
   color: black;

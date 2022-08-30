@@ -7,10 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+        integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/customs-menu.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/listtour.css') }}" />
-    <link rel="stylesheet" href="{{ asset('contactCSS/contact.css') }}" />
+    {{-- <link rel="stylesheet" href="{{ asset('contactCSS/contact.css') }}" /> --}}
     <link rel="stylesheet" href="{{ asset('css/listyamamori.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/detailtour.css') }}" />
+    <style>
+        .fix-img-cart {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+        }
+
+        .show-mb {
+            display: none;
+        }
+
+        .show-mb tbody {
+            width: 100%;
+        }
+
+        .show-mb tbody .img-mb {
+            width: 100px;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+        }
+
+        ion-icon {
+            visibility: visible !important;
+        }
+    </style>
     @livewireStyles
     <title>VIET NAM</title>
 </head>
@@ -50,11 +84,52 @@
                             <ion-icon name="cart-outline"></ion-icon>
                         </a>
                     </div>
-                    <div class="login me-3">
-                        <a href="#">
-                            <ion-icon name="person-outline"></ion-icon>
-                        </a>
-                    </div>
+                    @if (Route::has('login'))
+                        @auth
+
+                            @if (Auth::user()->utype === 'ADM')
+                                <div class="login me-3">
+                                    <a class="fix-hover" href="">{{ Auth::user()->name }}
+                                        <ion-icon name="chevron-down-outline"></ion-icon>
+                                    </a>
+                                    <div class="list-menu-user">
+                                        <div class="mt-2"><a href="{{ route('admin.dashboard') }}">Dashboard</a></div>
+                                        <div class="mt-2"><a href="{{ route('admin.categories') }}">Categories</a>
+                                        </div>
+                                        <div class="mt-2"><a href="{{ route('logout') }}"
+                                                onclick="event.preventDefault(); document.getElementById('logout-form').submit('');">Logout</a>
+                                        </div>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                            @csrf
+
+                                        </form>
+                                    </div>
+                                </div>
+                            @else
+                                <div class="login me-3">
+                                    <a class="fix-hover" href="">{{ Auth::user()->name }}
+                                        <ion-icon name="chevron-down-outline"></ion-icon>
+                                    </a>
+                                    <div class="list-menu-user">
+                                        <div class="mt-2"><a href="{{ route('user.dashboard') }}">Dashboard</a></div>
+                                        <div class="mt-2"><a href="{{ route('logout') }}"
+                                                onclick="event.preventDefault(); document.getElementById('logout-form').submit('');">ログアウト</a>
+                                        </div>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                            @csrf
+
+                                        </form>
+                                    </div>
+                                </div>
+                            @endif
+                        @else
+                            <div class="login me-3">
+                                <a href="{{ route('login') }}">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                </a>
+                            </div>
+                        @endauth
+                    @endif
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -118,12 +193,23 @@
         </div>
 
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
+        integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function() {
+            $('#datepicker').datepicker();
+        });
+    </script>
     @livewireScripts
 </body>
 
